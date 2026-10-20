@@ -1,1 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  --accent: #FF5A1F;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #F7F7F5;
+  color: #1A1A1A;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white bg-accent hover:brightness-110 transition-all;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold border-2 border-charcoal hover:bg-charcoal hover:text-white transition-all;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold bg-gray-100 hover:bg-gray-200 transition-all;
+  }
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white focus:outline-none focus:border-accent transition;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all;
+  }
+}
